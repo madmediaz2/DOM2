@@ -24,6 +24,7 @@ function eventLogger(event, Event){
 
 box1.addEventListener('click', function() {
     eventLogger(box1, 'clicked');
+    clicked = true;
     box1.style.backgroundColor = 'blue';
     });
 
@@ -45,6 +46,7 @@ resetButton.addEventListener('click', function() {
     });
 
 
+/*
 box1.addEventListener('mouseover', function() {
     eventLogger(box1, 'mouseover');
     box1.style.backgroundColor = 'yellow';
@@ -85,4 +87,4 @@ box3.addEventListener('mouseout', function() {
 resetButton.addEventListener('mouseout', function() {
     eventLogger(resetButton, 'mouseout');
     resetStyle(resetButton);
-    });
+    }); */
