@@ -5,18 +5,12 @@ var box3 = document.getElementById('b3');
 var resetButton = document.getElementById('reset');
 
 
-function resetStyle(box1=false, box2=false, box3=false){
-    if(box1){
-    box1.style.backgroundColor = '';
-    }
-    if (box2){      
-    box2.style.display = '';
-    }
-    if (box3){
-    box3.style.height = '';
-    box3.style.width = '';
-    }
+function resetStyle(...boxes) {
+    boxes.forEach(box => {
+        if (box) box.style = '';
+    });
 }
+
 
 function eventLogger(event, Event){
     console.log(`${event.id} ${Event}`);
@@ -24,7 +18,6 @@ function eventLogger(event, Event){
 
 box1.addEventListener('click', function() {
     eventLogger(box1, 'clicked');
-    clicked = true;
     box1.style.backgroundColor = 'blue';
     });
 
