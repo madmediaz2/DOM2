@@ -16,25 +16,25 @@ function eventLogger(event, Event){
     console.log(`${event.id} ${Event}`);
 }
 
-box1.addEventListener('click', function() {
-    eventLogger(box1, 'clicked');
+box1.addEventListener('click', function(event) {
+    eventLogger(box1, event.type);
     box1.style.backgroundColor = 'blue';
     });
 
 
-box2.addEventListener('click', function() {
-    eventLogger(box2, 'clicked');
+box2.addEventListener('click', function(event) {
+    eventLogger(box2, event.type);
     box2.style.display = 'none';
     });
 
-box3.addEventListener('click', function() {
-    eventLogger(box3, 'clicked');
+box3.addEventListener('click', function(event) {
+    eventLogger(box3, event.type);
     box3.style.height = '400px';
     box3.style.width = '400px';
     });
 
-resetButton.addEventListener('click', function() {
-    eventLogger(resetButton, 'clicked');
+resetButton.addEventListener('click', function(event) {
+    eventLogger(resetButton, event.type);
     resetStyle(box1, box2, box3);
     });
 
